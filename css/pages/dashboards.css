@@ -1,0 +1,267 @@
+/* Dashboard layout */
+.dashboard-page {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.dashboard-welcome,
+.dashboard-panel {
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.dashboard-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.dashboard-welcome h2,
+.dashboard-panel h2 {
+    margin: 0 0 0.5rem;
+}
+
+.dashboard-welcome p,
+.dashboard-panel p {
+    color: var(--text-secondary);
+}
+
+.dashboard-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--primary) !important;
+}
+
+/* Statistics cards */
+.dashboard-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.dashboard-metric {
+    min-width: 0;
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.dashboard-metric h3 {
+    margin: 0.5rem 0;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+}
+
+.metric-label {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.metric-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Course progress */
+.dashboard-course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.dashboard-course-card,
+.dashboard-shortcut,
+.submission-card {
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+.dashboard-course-card h3,
+.submission-card h3 {
+    margin: 0.75rem 0;
+}
+
+.dashboard-course-card > p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.progress-track {
+    height: 0.55rem;
+    overflow: hidden;
+    background: var(--border);
+    border-radius: 999px;
+    margin: 0.75rem 0 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: inherit;
+    transition: width 0.25s ease;
+}
+
+/* Quick links */
+.dashboard-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.dashboard-shortcut {
+    display: block;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: border-color 0.2s ease;
+}
+
+.dashboard-shortcut:hover {
+    border-color: var(--primary);
+}
+
+.dashboard-shortcut h3 {
+    margin-top: 0;
+}
+
+.dashboard-shortcut p {
+    margin-bottom: 0;
+    color: var(--text-secondary);
+}
+
+/* Instructor submissions and grading */
+.instructor-submissions {
+    display: grid;
+    gap: 1rem;
+}
+
+.submission-card {
+    display: grid;
+    gap: 1rem;
+}
+
+.submission-card .section-header {
+    margin: 0;
+}
+
+.submission-response {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    padding: 1rem;
+    background: var(--background);
+    border-radius: var(--radius);
+    font-family: inherit;
+}
+
+.submission-date {
+    font-size: 0.85rem;
+}
+
+.grade-submission-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.grade-submission-form label,
+.role-switcher label {
+    display: grid;
+    gap: 0.4rem;
+    font-weight: 600;
+}
+
+.grade-submission-form input,
+.grade-submission-form textarea,
+.user-role-form select,
+.role-switcher select {
+    width: 100%;
+    padding: 0.7rem;
+    color: var(--text-primary);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font: inherit;
+}
+
+.grade-submission-form textarea {
+    resize: vertical;
+}
+
+/* Admin table */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    padding: 0.9rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+.dashboard-table th {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.user-role-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 220px;
+}
+
+.user-role-form select {
+    min-width: 100px;
+}
+
+.role-switcher {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+/* Mobile and tablet */
+@media (max-width: 900px) {
+    .dashboard-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-course-grid,
+    .dashboard-shortcuts {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-welcome,
+    .dashboard-panel {
+        padding: 1rem;
+    }
+
+    .dashboard-metric {
+        padding: 1rem;
+    }
+
+    .dashboard-metric h3 {
+        font-size: 1.4rem;
+    }
+}

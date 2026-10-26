@@ -1,0 +1,377 @@
+
+/* Shared learning pages */
+
+.learning-page {
+    width: 100%;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.catalog-count {
+    padding: 7px 12px;
+    background: #eef2ff;
+    color: var(--primary);
+    border-radius: 20px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.catalog-toolbar {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.catalog-toolbar input,
+.catalog-toolbar select {
+    min-width: 0;
+    padding: 12px 14px;
+    background: var(--surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.catalog-toolbar input {
+    flex: 1;
+}
+
+.catalog-toolbar select {
+    width: 200px;
+}
+
+.catalog-grid .course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.course-info,
+.course-progress-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin-top: 12px;
+    font-size: 0.85rem;
+}
+
+.course-info span {
+    color: var(--text-secondary);
+}
+
+.course-info strong {
+    text-align: right;
+}
+
+.course-progress-heading {
+    margin-top: 20px;
+}
+
+.course-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 11px 16px;
+    color: white;
+    background: var(--primary);
+    border: 0;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.course-button:hover {
+    background: var(--primary-hover);
+}
+
+.catalog-grid .course-button {
+    margin-top: auto;
+    transform: translateY(18px);
+}
+
+.catalog-grid .course-info:first-of-type {
+    margin-top: 18px;
+}
+
+.catalog-grid .course-description {
+    margin-bottom: 0;
+}
+
+.catalog-empty {
+    margin-top: 20px;
+    padding: 22px;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+/* Course details */
+
+.course-hero {
+    margin-bottom: 32px;
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.course-hero h2 {
+    margin: 12px 0;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+.course-hero > p {
+    max-width: 760px;
+}
+
+.course-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin: 22px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.progress-summary {
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+.curriculum-header {
+    margin-bottom: 20px;
+}
+
+.curriculum-header p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+.lesson-section {
+    margin-bottom: 22px;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.lesson-section > h3 {
+    padding: 18px 20px;
+    background: #f1f5f9;
+    font-size: 1rem;
+}
+
+.lesson-list {
+    padding: 0 20px;
+}
+
+.lesson-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.lesson-row:last-child {
+    border-bottom: 0;
+}
+
+.lesson-number {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    color: var(--primary);
+    background: #eef2ff;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.lesson-row-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.lesson-row-content strong {
+    overflow-wrap: anywhere;
+}
+
+.lesson-row-content small {
+    color: var(--text-secondary);
+}
+
+.lesson-state {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Lesson reader */
+
+.lesson-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: start;
+    gap: 26px;
+}
+
+.lesson-main,
+.lesson-sidebar {
+    min-width: 0;
+    padding: 26px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.lesson-breadcrumb {
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.lesson-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    overflow-wrap: anywhere;
+}
+
+.lesson-duration {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.lesson-body {
+    margin-top: 32px;
+}
+
+.lesson-content-section {
+    margin-bottom: 28px;
+}
+
+.lesson-content-section h2 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.lesson-content-section p {
+    line-height: 1.9;
+}
+
+.lesson-completion {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.lesson-completion p {
+    margin-bottom: 8px;
+}
+
+.lesson-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.lesson-nav-link {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.lesson-sidebar h2 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.lesson-sidebar > p {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.lesson-sidebar-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
+
+.lesson-sidebar-link span {
+    flex-shrink: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.lesson-sidebar-link.current {
+    color: var(--primary);
+    background: #eef2ff;
+    border-radius: 6px;
+}
+
+/* Responsive learning views */
+
+@media (max-width: 1000px) {
+    .lesson-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-sidebar {
+        order: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog-toolbar {
+        flex-direction: column;
+    }
+
+    .catalog-toolbar select {
+        width: 100%;
+    }
+
+    .course-hero,
+    .lesson-main,
+    .lesson-sidebar {
+        padding: 20px 16px;
+    }
+
+    .lesson-list {
+        padding: 0 12px;
+    }
+
+    .lesson-row {
+        gap: 10px;
+    }
+
+    .lesson-state {
+        font-size: 0.75rem;
+    }
+
+    .lesson-navigation {
+        flex-wrap: wrap;
+    }
+}
